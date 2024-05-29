@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Add your pokemon</h1>
+  <%# /pokemons %>
+  <%= simple_form_for([@trainer, @pokemon]) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :image_url %>
+    <%= f.submit %>
+  <% end %>
+
+</div>
