@@ -11,6 +11,7 @@
 puts 'Cleaning db...'
 Pokemon.destroy_all
 Trainer.destroy_all
+Type.destroy_all
 
 puts 'Creating trainers...'
 
@@ -19,3 +20,8 @@ Trainer.create!(name: 'Misty', banner_url: 'https://th.bing.com/th/id/R.df5648b5
 Trainer.create!(name: 'Ash', banner_url: "https://th.bing.com/th/id/R.6ee9013cf67d650c1102f9ba5b963d9f?rik=7Y5RIOyT14NNaA&riu=http%3a%2f%2fimages4.fanpop.com%2fimage%2fphotos%2f17700000%2fAsh-ash-ketchum-17729805-640-480.jpg&ehk=uXZXfFRQaBM6nijAVywnYanrldL7F7oxJzrDEHPuHrU%3d&risl=&pid=ImgRaw&r=0")
 
 puts "Done zo/"
+
+
+['electric', 'fire', 'water', 'grass', 'rock', 'ground', 'normal', 'ice'].each do |type_name|
+  Type.create!(name: type_name)
+end

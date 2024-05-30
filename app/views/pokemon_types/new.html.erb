@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Add type to Pokemon</h1>
+  <%= simple_form_for [@pokemon, @pokemon_type] do |f| %>
+    <%= f.input :type, collection: Type.all, input_html: { multiple: true  } %>
+    <%= f.submit %>
+  <% end %>
+
+</div>

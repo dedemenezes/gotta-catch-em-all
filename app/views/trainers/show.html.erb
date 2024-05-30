@@ -17,6 +17,12 @@
               <%= link_to pokemon_path(pokemon), data: { turbo_method: :delete, turbo_confirm: "Are you sure? It's so cute"}, class: 'card-remove-link' do %>
                 <%= icon('fa-solid', 'trash', class: 'fs-6') %>
               <% end %>
+              <div class="poke-types">
+                <% pokemon.types.each do |type| %>
+                  <small class="type-pill"><%= type.name %></small>
+                <% end %>
+              </div>
+              <%= link_to 'Add type', new_pokemon_pokemon_type_path(pokemon) %>
             </div>
           </div>
         <% end %>
