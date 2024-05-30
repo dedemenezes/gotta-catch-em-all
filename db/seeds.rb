@@ -9,6 +9,7 @@
 #   end
 
 puts 'Cleaning db...'
+Pokemon.destroy_all
 Trainer.destroy_all
 
 puts 'Creating trainers...'
